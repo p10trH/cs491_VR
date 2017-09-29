@@ -19,11 +19,31 @@
             margin: 0px;
         }
 
+        a.title:link,
+        a.title:visited {
+            color: black;
+            text-decoration: underline;
+            cursor: auto;
+        }
+
+        a.title:hover {
+            color: #3c3c3c;
+        }
+
+        a.title:link:active,
+        a.title:visited:active {
+            color: (internal value);
+        }
+
         a:link,
         a:visited {
             color: white;
             text-decoration: underline;
             cursor: auto;
+        }
+
+        a:hover {
+            color: #d1d1d1;
         }
 
         a:link:active,
@@ -79,7 +99,13 @@
 
 <body>
 
-    <div class="navBar">Peter Hanula, CS491</div>
+    <div class="navBar">
+        <div style="position: absolute; left: 35px;">Peter Hanula, CS491</div>
+        <div style="position: absolute; right: 35px;">
+            <a class="title" href="https://github.com/p10trH/cs491_VR" target="_blank">github.com/p10trH</a>
+        </div>
+    </div>
+
 
     <div class="week" style="margin-top: 70px; background-color: hsl(359, 19%, 54%);">
         <h1 class="title">Assignment 1</h1>
@@ -120,7 +146,7 @@
             <div style="width: 1px; height: 15px;"></div>
             <a href="/cs491_VR/resources/cs491_overview_P1.pdf" target="_blank">Alternative PDF link</a>
             <div style="width: 1px; height: 15px;"></div>
-            <a href="https://youtu.be/KXWRU2yzeoo">YouTube Video Link</a>
+            <a href="https://youtu.be/KXWRU2yzeoo" target="_blank">YouTube Video Link</a>
         </div>
     </div>
 
