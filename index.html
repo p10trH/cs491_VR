@@ -69,9 +69,19 @@
         .week {
             width: 85%;
             height: auto;
-            margin: 30px auto;
+            margin: 15px auto;
             padding: 10px;
             box-shadow: 0px 5px 13px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .expandable {
+            width: 100%;
+            padding: 1px 0px 1px 0px;
+        }
+
+        .expandable:hover {
+            background-color: rgba(36, 36, 36, 0.25);
+            cursor: pointer;
         }
 
         .title {
@@ -80,13 +90,14 @@
         }
 
         .content {
+            display: none;
             height: auto;
             width: auto;
             padding: 10px 20px;
         }
 
         .line {
-            display: block;
+            display: none;
             margin-top: 10px;
             margin-bottom: 5px;
             margin-left: 10px;
@@ -111,7 +122,9 @@
     <div style="width: 100%; height: 50px"></div>
 
     <div class="week" style="background-color: hsl(161, 19%, 54%);">
-        <h1 class="title">Student's Choice</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">SC</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
             <div>I will be talking about the new Logitech and HTC VR keyboard.</div>
@@ -120,7 +133,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(183, 19%, 54%);">
-        <h1 class="title">Project 3</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">P3</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
             <div>Proposal</div>
@@ -132,7 +147,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(205, 19%, 54%);">
-        <h1 class="title">Project 2</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">P2</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
             <div>This was a group project. Here are some links to follow.</div>
@@ -153,7 +170,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(227, 19%, 54%);">
-        <h1 class="title">Assignment 6</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">A6</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
             <object width="100%" height="700px" data="/cs491_VR/resources/cs491_spaceAR_A6.pdf"></object>
@@ -163,7 +182,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(249, 19%, 54%);">
-        <h1 class="title">Assignment 5</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">A5</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
             <object width="100%" height="700px" data="/cs491_VR/resources/cs491_furnitureAR_A5.pdf"></object>
@@ -174,7 +195,9 @@
 
 
     <div class="week" style="background-color: hsl(271, 19%, 54%);">
-        <h1 class="title">Assignment 4</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">A4</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
             <object width="100%" height="700px" data="/cs491_VR/resources/cs491_projectReviews_A4.pdf"></object>
@@ -184,7 +207,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(293, 19%, 54%);">
-        <h1 class="title">Project 1</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">P1</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
             <object width="100%" height="700px" data="/cs491_VR/resources/cs491_overview_P1.pdf"></object>
@@ -197,7 +222,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(315, 19%, 54%);">
-        <h1 class="title">Assignment 3</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">A3</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
             <object width="100%" height="700px" data="/cs491_VR/resources/cs491_scale_A3.pdf"></object>
@@ -207,7 +234,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(337, 19%, 54%);">
-        <h1 class="title">Assignment 2</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">A2</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
             <object width="100%" height="700px" data="/cs491_VR/resources/cs491_translate_A2.pdf"></object>
@@ -217,7 +246,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(359, 19%, 54%);">
-        <h1 class="title">Assignment 1</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">A1</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
             <object width="100%" height="700px" data="/cs491_VR/resources/cs491_demos_A1.pdf"></object>
@@ -226,11 +257,35 @@
         </div>
     </div>
 
+    <script>
+        function toggleContent(event) {
+
+            //var targ = event;
+
+            //console.log(event.className);
+
+            //console.log(event.parentNode.className);
+
+            for (var i = 1; i < event.parentNode.children.length; i++) {
+                console.log(event.parentNode.children[i].className);
+
+                if (event.parentNode.children[i].style.display === "block") {
+                    event.parentNode.children[i].style.display = "none";
+                } else {
+                    event.parentNode.children[i].style.display = "block";
+                }
+            }
+        }
+
+    </script>
+
     <!--
 
 
     <div class="week" style="background-color: hsl(139, 19%, 54%);">
-        <h1 class="title">Week 11</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">Week 11</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
 
@@ -238,7 +293,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(117, 19%, 54%);">
-        <h1 class="title">Week 12</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">Week 12</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
 
@@ -246,7 +303,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(95, 19%, 54%);">
-        <h1 class="title">Week 13</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">Week 13</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
 
@@ -254,7 +313,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(73, 19%, 54%);">
-        <h1 class="title">Week 14</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">Week 14</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
 
@@ -262,7 +323,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(51, 19%, 54%);">
-        <h1 class="title">Week 15</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">Week 15</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
 
@@ -270,7 +333,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(29, 19%, 54%);">
-        <h1 class="title">Week 16</h1>
+        <div class="expandable" onclick="toggleContent(this)">
+            <h1 class="title">Week 16</h1>
+        </div>
         <div class="line"></div>
         <div class="content">
 
