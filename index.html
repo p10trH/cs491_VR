@@ -296,6 +296,8 @@
     <script>
         function toggleContent(event) {
 
+            var resetPos = false;
+
 
             var arrowSymbol = event.parentNode.getElementsByClassName("expandSymbol")[0];
 
@@ -306,6 +308,8 @@
                     event.parentNode.children[i].style.display = "none";
                 } else {
                     event.parentNode.children[i].style.display = "block";
+
+                    resetPos = true;
                     //event.parentNode.scrollIntoView({
                     //    behavior: "smooth",
                     //    block: "start",
@@ -321,11 +325,14 @@
             else
                 arrowSymbol.innerText = "➕";
 
-            const element = event.parentNode;
-            const elementRect = element.getBoundingClientRect();
-            const absoluteElementTop = elementRect.top + window.pageYOffset;
-            const offset = absoluteElementTop - 65;
-            window.scrollTo(0, offset);
+            if (resetPos) {
+
+                const element = event.parentNode;
+                const elementRect = element.getBoundingClientRect();
+                const absoluteElementTop = elementRect.top + window.pageYOffset;
+                const offset = absoluteElementTop - 65;
+                window.scrollTo(0, offset);
+            }
         }
 
     </script>
