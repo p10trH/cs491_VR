@@ -331,7 +331,11 @@
                 const elementRect = element.getBoundingClientRect();
                 const absoluteElementTop = elementRect.top + window.pageYOffset;
                 const offset = absoluteElementTop - 65;
-                window.scrollTo(0, offset);
+                window.scrollTo({
+                    top: offset,
+                    left: 0,
+                    behavior: 'smooth'
+                });
             }
         }
 
