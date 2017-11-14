@@ -69,6 +69,7 @@
         .week {
             width: 85%;
             height: auto;
+            min-width: 600px;
             min-height: 82px;
             margin: 15px auto;
             padding: 10px 0px 10px 0px;
@@ -101,6 +102,14 @@
             transition: 0.5s;
         }
 
+        .description {
+            display: none;
+            text-align: left;
+            padding-left: 50px;
+            line-height: 34px;
+            transition: 0.5s;
+        }
+
         .content {
             display: none;
             height: auto;
@@ -119,6 +128,8 @@
 
         iframe {
             border: 0;
+            display: block;
+            margin: auto;
         }
 
     </style>
@@ -137,9 +148,43 @@
 
     <div style="width: 100%; height: 50px"></div>
 
+
     <div class="week" style="background-color: hsl(139, 19%, 54%);">
-        <div class="expandable" onclick="toggleContent(this)" style="clear: both">
+        <div class="expandable" onclick="toggleContent(this)" onmouseover="showDescription(this, true)" onmouseout="showDescription(this, false)" style="clear: both">
             <h1 class="expandSymbol" style="float: left">+</h1>
+            <h5 class="description" style="float: left">Week 15 (12/4) - Try Everything</h5>
+            <h1 class="title" style="float: right">P3</h1>
+        </div>
+        <div class="line"></div>
+        <div class="content">
+            <div>Proposal (11/3)</div>
+            <div style="width: 1px; height: 15px;"></div>
+            <object width="100%" height="700px" data="/cs491_VR/resources/cs491_proposal_P3.pdf"></object>
+            <div style="width: 1px; height: 15px;"></div>
+            <a href="/cs491_VR/resources/cs491_proposal_P3.pdf" target="_blank">Alternative PDF link</a>
+        </div>
+    </div>
+
+    <div class="week" style="background-color: hsl(161, 19%, 54%);">
+        <div class="expandable" onclick="toggleContent(this)" onmouseover="showDescription(this, true)" onmouseout="showDescription(this, false)" style="clear: both">
+            <h1 class="expandSymbol" style="float: left">+</h1>
+            <h5 class="description" style="float: left">Week 12 & 13 (11/13) - Student's Choice Presentations</h5>
+            <h1 class="title" style="float: right">SC</h1>
+        </div>
+        <div class="line"></div>
+        <div class="content">
+            <iframe width="90%" height="700px" src="https://docs.google.com/document/d/e/2PACX-1vSCdmruf6eXtOBILFD049vbpSXRDnlclBS3jott3nKNv8beY3TWdupib3JZx_Dl0t_QL1ON9YU3cO9d/pub?embedded=true"></iframe>
+            <div style="width: 1px; height: 15px;"></div>
+            <div class="line" style="display: block"></div>
+            <div style="width: 1px; height: 15px;"></div>
+            <a href="/cs491_VR/resources/cs491_VRkeyboard_SC.pdf" target="_blank">Static PDF version</a>
+        </div>
+    </div>
+
+    <div class="week" style="background-color: hsl(183, 19%, 54%);">
+        <div class="expandable" onclick="toggleContent(this)" onmouseover="showDescription(this, true)" onmouseout="showDescription(this, false)" style="clear: both">
+            <h1 class="expandSymbol" style="float: left">+</h1>
+            <h5 class="description" style="float: left">Week 11 (11/10) - Holoportation</h5>
             <h1 class="title" style="float: right">A7</h1>
         </div>
         <div class="line"></div>
@@ -150,40 +195,10 @@
         </div>
     </div>
 
-    <div class="week" style="background-color: hsl(161, 19%, 54%);">
-        <div class="expandable" onclick="toggleContent(this)" style="clear: both">
-            <h1 class="expandSymbol" style="float: left">+</h1>
-            <h1 class="title" style="float: right">P3</h1>
-        </div>
-        <div class="line"></div>
-        <div class="content">
-            <div>Proposal</div>
-            <div style="width: 1px; height: 15px;"></div>
-            <object width="100%" height="700px" data="/cs491_VR/resources/cs491_proposal_P3.pdf"></object>
-            <div style="width: 1px; height: 15px;"></div>
-            <a href="/cs491_VR/resources/cs491_proposal_P3.pdf" target="_blank">Alternative PDF link</a>
-        </div>
-    </div>
-
-    <div class="week" style="background-color: hsl(183, 19%, 54%);">
-        <div class="expandable" onclick="toggleContent(this)" style="clear: both">
-            <h1 class="expandSymbol" style="float: left">+</h1>
-            <h1 class="title" style="float: right">SC</h1>
-        </div>
-        <div class="line"></div>
-        <div class="content">
-            <iframe width="100%" height="700px" src="https://docs.google.com/document/d/e/2PACX-1vSCdmruf6eXtOBILFD049vbpSXRDnlclBS3jott3nKNv8beY3TWdupib3JZx_Dl0t_QL1ON9YU3cO9d/pub?embedded=true"></iframe>
-            <div style="width: 1px; height: 15px;"></div>
-            <div class="line" style="display: block"></div>
-            <div style="width: 1px; height: 15px;"></div>
-            <a href="/cs491_VR/resources/cs491_VRkeyboard_SC.pdf" target="_blank">Static PDF version</a>
-        </div>
-    </div>
-
-
     <div class="week" style="background-color: hsl(205, 19%, 54%);">
-        <div class="expandable" onclick="toggleContent(this)" style="clear: both">
+        <div class="expandable" onclick="toggleContent(this)" onmouseover="showDescription(this, true)" onmouseout="showDescription(this, false)" style="clear: both">
             <h1 class="expandSymbol" style="float: left">+</h1>
+            <h5 class="description" style="float: left">Week 9 (10/23) - Here Comes the Sun</h5>
             <h1 class="title" style="float: right">P2</h1>
         </div>
         <div class="line"></div>
@@ -205,8 +220,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(227, 19%, 54%);">
-        <div class="expandable" onclick="toggleContent(this)" style="clear: both">
+        <div class="expandable" onclick="toggleContent(this)" onmouseover="showDescription(this, true)" onmouseout="showDescription(this, false)" style="clear: both">
             <h1 class="expandSymbol" style="float: left">+</h1>
+            <h5 class="description" style="float: left">Week 8 (10/20) - AR Astronomy</h5>
             <h1 class="title" style="float: right">A6</h1>
         </div>
         <div class="line"></div>
@@ -218,8 +234,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(249, 19%, 54%);">
-        <div class="expandable" onclick="toggleContent(this)" style="clear: both">
+        <div class="expandable" onclick="toggleContent(this)" onmouseover="showDescription(this, true)" onmouseout="showDescription(this, false)" style="clear: both">
             <h1 class="expandSymbol" style="float: left">+</h1>
+            <h5 class="description" style="float: left">Week 7 (10/13) - AR Furniture</h5>
             <h1 class="title" style="float: right">A5</h1>
         </div>
         <div class="line"></div>
@@ -232,8 +249,9 @@
 
 
     <div class="week" style="background-color: hsl(271, 19%, 54%);">
-        <div class="expandable" onclick="toggleContent(this)" style="clear: both">
+        <div class="expandable" onclick="toggleContent(this)" onmouseover="showDescription(this, true)" onmouseout="showDescription(this, false)" style="clear: both">
             <h1 class="expandSymbol" style="float: left">+</h1>
+            <h5 class="description" style="float: left">Week 5 & 6 (10/6) - Project 1 Reviews</h5>
             <h1 class="title" style="float: right">A4</h1>
         </div>
         <div class="line"></div>
@@ -245,8 +263,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(293, 19%, 54%);">
-        <div class="expandable" onclick="toggleContent(this)" style="clear: both">
+        <div class="expandable" onclick="toggleContent(this)" onmouseover="showDescription(this, true)" onmouseout="showDescription(this, false)" style="clear: both">
             <h1 class="expandSymbol" style="float: left">+</h1>
+            <h5 class="description" style="float: left">Week 5 (9/25) - In Your Room</h5>
             <h1 class="title" style="float: right">P1</h1>
         </div>
         <div class="line"></div>
@@ -261,8 +280,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(315, 19%, 54%);">
-        <div class="expandable" onclick="toggleContent(this)" style="clear: both">
+        <div class="expandable" onclick="toggleContent(this)" onmouseover="showDescription(this, true)" onmouseout="showDescription(this, false)" style="clear: both">
             <h1 class="expandSymbol" style="float: left">+</h1>
+            <h5 class="description" style="float: left">Week 4 (9/22) - Walking Small</h5>
             <h1 class="title" style="float: right">A3</h1>
         </div>
         <div class="line"></div>
@@ -274,8 +294,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(337, 19%, 54%);">
-        <div class="expandable" onclick="toggleContent(this)" style="clear: both">
+        <div class="expandable" onclick="toggleContent(this)" onmouseover="showDescription(this, true)" onmouseout="showDescription(this, false)" style="clear: both">
             <h1 class="expandSymbol" style="float: left">+</h1>
+            <h5 class="description" style="float: left">Week 3 (9/15) - Google Translate</h5>
             <h1 class="title" style="float: right">A2</h1>
         </div>
         <div class="line"></div>
@@ -287,8 +308,9 @@
     </div>
 
     <div class="week" style="background-color: hsl(359, 19%, 54%);">
-        <div class="expandable" onclick="toggleContent(this)" style="clear: both">
+        <div class="expandable" onclick="toggleContent(this)" onmouseover="showDescription(this, true)" onmouseout="showDescription(this, false)" style="clear: both">
             <h1 class="expandSymbol" style="float: left">+</h1>
+            <h5 class="description" style="float: left">Week 1 (9/1) - Reflecting on the Demos</h5>
             <h1 class="title" style="float: right">A1</h1>
         </div>
         <div class="line"></div>
@@ -343,6 +365,17 @@
                     behavior: 'smooth'
                 });
             }
+        }
+
+        function showDescription(event, flag) {
+
+            var desc = event.parentNode.getElementsByClassName("description")[0];
+
+            if (flag)
+                desc.style.display = "block";
+            else
+                desc.style.display = "none";
+
         }
 
     </script>
