@@ -133,7 +133,7 @@
         }
 
         .pulse {
-            box-shadow: 0px 5px 13px 2px rgba(204, 169, 44, 0.4);
+            outline: 0px solid rgba(44, 44, 44, 0.5);
             animation: pulse 2s infinite;
         }
 
@@ -143,28 +143,28 @@
 
         @-webkit-keyframes pulse {
             0% {
-                -webkit-box-shadow: 0px 5px 13px 2px rgba(204, 169, 44, 0.4);
+                -webkit-outline: 0px solid rgba(44, 44, 44, 0.5);
             }
             70% {
-                -webkit-box-shadow: 0px 5px 13px 10px rgba(204, 169, 44, 0);
+                -webkit-outline: 5px solid rgba(44, 44, 44, 0.5);
             }
             100% {
-                -webkit-box-shadow: 0px 5px 13px 2px rgba(204, 169, 44, 0);
+                -webkit-outline: 0px solid rgba(44, 44, 44, 0.5);
             }
         }
 
         @keyframes pulse {
             0% {
-                -moz-box-shadow: 0px 5px 13px 2px rgba(204, 169, 44, 0.4);
-                box-shadow: 0px 5px 13px 2px rgba(204, 169, 44, 0.4);
+                -moz-outline: 0px solid rgba(44, 44, 44, 0.5);
+                outline: 0px solid rgba(44, 44, 44, 0.5);
             }
             70% {
-                -moz-box-shadow: 0px 5px 13px 10px rgba(204, 169, 44, 0);
-                box-shadow: 0px 5px 13px 10px rgba(204, 169, 44, 0);
+                -moz-outline: 5px solid rgba(44, 44, 44, 0.5);
+                outline: 5px solid rgba(44, 44, 44, 0.5);
             }
             100% {
-                -moz-box-shadow: 0px 5px 13px 2px rgba(204, 169, 44, 0);
-                box-shadow: 0px 5px 13px 2px rgba(204, 169, 44, 0);
+                -moz-outline: 0px solid rgba(44, 44, 44, 0.5);
+                outline: 0px solid rgba(44, 44, 44, 0.5);
             }
         }
 
