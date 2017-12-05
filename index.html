@@ -167,7 +167,6 @@
                 outline: 0px solid rgba(44, 44, 44, 0.5);
             }
         }
-
     </style>
 </head>
 
@@ -185,7 +184,7 @@
     <div style="width: 100%; height: 50px"></div>
 
 
-    <div class="week" style="background-color: hsl(117, 19%, 54%);">
+    <div class="week pulse" style="background-color: hsl(117, 19%, 54%);">
         <div class="expandable" onclick="toggleContent(this)" onmouseover="showDescription(this, true)" onmouseout="showDescription(this, false)" style="clear: both">
             <h1 class="expandSymbol" style="float: left">+</h1>
             <h5 class="description" style="float: left">Week 15 (12/4) - Try Everything</h5>
@@ -193,15 +192,17 @@
         </div>
         <div class="line"></div>
         <div class="content">
-            <div>Proposal (11/3)</div>
+            <iframe width="90%" height="700px" src="https://docs.google.com/document/d/e/2PACX-1vQIECbbEm5ocb-CF9PVhMtxPsxMqyr4b6Du7ObDmBBiibqkPoM5YBLl1QvrOL7UHUr-EpJkLc8X8ZJi/pub?embedded=true"></iframe>
             <div style="width: 1px; height: 15px;"></div>
-            <object width="100%" height="700px" data="/cs491_VR/resources/cs491_proposal_P3.pdf"></object>
+            <div class="line" style="display: block"></div>
             <div style="width: 1px; height: 15px;"></div>
-            <a href="/cs491_VR/resources/cs491_proposal_P3.pdf" target="_blank">Alternative PDF link</a>
+            <a href="/cs491_VR/resources/cs491_proposal_P3.pdf" target="_blank">Original Proposal (11/3)</a>
+            <div style="width: 1px; height: 15px;"></div>
+
         </div>
     </div>
 
-    <div class="week pulse" style="background-color: hsl(139, 19%, 54%);">
+    <div class="week" style="background-color: hsl(139, 19%, 54%);">
         <div class="expandable" onclick="toggleContent(this)" onmouseover="showDescription(this, true)" onmouseout="showDescription(this, false)" style="clear: both">
             <h1 class="expandSymbol" style="float: left">+</h1>
             <h5 class="description" style="float: left">Week 12 & 13 (11/24) - Reflecting on SC Presentations</h5>
@@ -236,6 +237,7 @@
             <div class="line" style="display: block"></div>
             <div style="width: 1px; height: 15px;"></div>
             <a href="/cs491_VR/resources/cs491_VRkeyboard_SC.pdf" target="_blank">Static PDF version</a>
+            <div style="width: 1px; height: 15px;"></div>
         </div>
     </div>
 
@@ -435,7 +437,6 @@
                 desc.style.display = "none";
 
         }
-
     </script>
 
     <!--
